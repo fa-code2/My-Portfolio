@@ -64,10 +64,10 @@ async function loadMediumArticles() {
       articlesDiv.innerHTML = html;
 
     } else {
-      statusDiv.textContent = '❌ No articles found';
+      statusDiv.textContent = ' No articles found';
     }
   } catch (e) {
-    statusDiv.textContent = `❌ Error: ${e.message}`;
+    statusDiv.textContent = ` Error: ${e.message}`;
   }
 }
 

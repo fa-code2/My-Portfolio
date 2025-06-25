@@ -53,15 +53,26 @@ nav {
     width: 100%;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    padding: 1rem;
+    padding: 1rem 0;
     z-index: 1000;
+    overflow-x: hidden;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     list-style: none;
     gap: 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* For smooth iOS scrolling */
+    padding: 0 1rem;
+
+
+}
+
+nav ul::-webkit-scrollbar {
+    display: none;
 }
 
 nav a {
@@ -69,6 +80,9 @@ nav a {
     color: #333;
     font-weight: 500;
     transition: color 0.3s;
+    padding: 0.5rem;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 nav a:hover {
